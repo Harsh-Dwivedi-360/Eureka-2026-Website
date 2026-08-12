@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EUREKA 2026 — LTCE Tech Fest</title>
+<meta name="description" content="LTCE's flagship annual tech competition. Register free. Win ₹30,000+ in prizes."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="Style.css">
+<script src="Script.js" defer></script>
+</head>
+<body>
+
+<!-- PROGRESS BAR -->
+<div id="progress-bar"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">
+    <img src="ecell-logo.png" alt="E-Cell LTCE" class="nav-logo-img">
+    <img src="nec-logo.png" alt="NEC" class="nav-logo-img">
+</a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
+    <li><a href="#rules">Rules</a></li>
+    <li><a href="#prizes">Prizes</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="Registration.html">Register</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="Registration.html" class="nav-cta">Register Now</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#home" class="mobile-link">Home</a>
+  <a href="#about" class="mobile-link">About</a>
+  <a href="#how-it-works" class="mobile-link">How It Works</a>
+  <a href="#rules" class="mobile-link">Rules</a>
+  <a href="#prizes" class="mobile-link">Prizes</a>
+  <a href="#faq" class="mobile-link">FAQ</a>
+  <a href="Registration.html" class="mobile-link">Register</a>
+  <a href="#contact" class="mobile-link">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-glow-1"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-glow-3"></div>
+  <canvas id="hero-canvas" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:1;"></canvas>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="badge-dot"></span>EUREKA 2026 • 22 August 2026</div>
+    <h1 class="hero-title">EUREKA</h1>
+    <p class="hero-tagline">Where Ideas Ignite Innovation</p>
+    <p class="hero-sub">LTCE's Annual National Tech Competition · Koparkhairane, Navi Mumbai</p>
+    <div class="hero-buttons">
+      <a href="Registration.html" class="btn-primary">Register Now &rarr;</a>
+      <a href="#about" class="btn-ghost">Explore Event</a>
+    </div>
+    <div class="countdown" id="countdown">
+      <div class="cd-box"><span class="cd-num" id="cd-days">00</span><span class="cd-label">Days</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">Hours</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">Minutes</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">Seconds</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <p class="section-label reveal">About the Event</p>
+  <h2 class="section-title reveal">What is EUREKA?</h2>
+  <div class="gold-line reveal"></div>
+  <div class="about-grid">
+    <div class="about-text reveal-left">
+      <p>EUREKA is LTCE's flagship annual tech competition — a platform where student teams transform bold ideas into working solutions and pitch them to a panel of industry experts.</p>
+      <p>Whether you're building a web app, an AI model, an IoT device, or any tech-driven innovation, EUREKA is the stage where your ideas get the spotlight they deserve.</p>
+      <p>Compete in three rounds designed to test your ideation, execution, and presentation skills — and walk away with prizes, recognition, and connections that last a lifetime.</p>
+    </div>
+    <div class="orbit-card reveal-right">
+      <!-- Static orbit path rings -->
+      <div class="orbit-ring ring1"></div>
+      <div class="orbit-ring ring2"></div>
+      <div class="orbit-ring ring3"></div>
+      <!-- Asteroid system -->
+      <div class="asteroid-system">
+        <div class="asteroid-ring asteroid-ring-1"><div class="asteroid a-g1"></div></div>
+        <div class="asteroid-ring asteroid-ring-2"><div class="asteroid a-c1"></div></div>
+        <div class="asteroid-ring asteroid-ring-3"><div class="asteroid a-g2"></div></div>
+        <div class="asteroid-ring asteroid-ring-4"><div class="asteroid a-c2"></div></div>
+        <div class="asteroid-ring asteroid-ring-5"><div class="asteroid a-g3"></div></div>
+        <div class="asteroid-ring asteroid-ring-6"><div class="asteroid a-c3"></div></div>
+        <div class="asteroid-ring asteroid-ring-7"><div class="asteroid a-g4"></div></div>
+        <div class="asteroid-ring asteroid-ring-8"><div class="asteroid a-c4"></div></div>
+      </div>
+      <div class="orbit-text">EST.<br/>2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="section section-alt">
+  <p class="section-label reveal">By the Numbers</p>
+  <h2 class="section-title reveal">Our Achievements</h2>
+  <div class="gold-line reveal"></div>
+  <div class="stats-row" id="stats-row">
+    <div class="stat-item reveal"><span class="stat-num" data-target="100" data-suffix="+">0+</span><p class="stat-label">Registrations</p></div>
+    <div class="stat-item reveal" style="transition-delay:0.1s"><span class="stat-num" data-target="20" data-suffix="+">0+</span><p class="stat-label">Projects Submitted</p></div>
+    <div class="stat-item reveal" style="transition-delay:0.2s"><span class="stat-num" data-target="4" data-suffix="+">0+</span><p class="stat-label">Expert Judges</p></div>
+    <div class="stat-item reveal" style="transition-delay:0.3s"><span class="stat-num" data-target="2" data-suffix="">0</span><p class="stat-label">Editions Held</p></div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="section vision-section">
+  <div class="vision-grid-bg"></div>
+  <div class="vision-inner reveal">
+    <p class="section-label">Our Vision</p>
+    <div class="vision-line"></div>
+    <p class="vision-quote">"Born from the vision of building tomorrow's problem solvers at LTCE."</p>
+    <p class="vision-para">EUREKA bridges the gap between academics and real-world innovation. We believe every student has the potential to be a creator, a builder, and a leader — and this competition is the launchpad for that journey.</p>
+    <div class="vision-line"></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="section section-alt">
+  <p class="section-label reveal">The Competition</p>
+  <h2 class="section-title reveal">How EUREKA Works</h2>
+  <p class="section-sub reveal">A 3-round competition designed to test ideation, technical depth, and live presentation.</p>
+  <div class="rounds-grid">
+    <div class="glass round-card reveal">
+      <div class="round-num">01</div>
+      <span class="round-icon">💡</span>
+      <h3 class="round-title">Idea Submission</h3>
+      <p class="round-desc">Submit your team's project idea with a brief abstract and a clear problem statement. Shortlisted teams advance to Round 2.</p>
+      <span class="round-badge">Deadline: Aug 20 2026</span>
+      <div class="round-arrow">→</div>
+    </div>
+    <div class="glass round-card reveal" style="transition-delay:0.15s">
+      <div class="round-num">02</div>
+      <span class="round-icon">🛠️</span>
+      <h3 class="round-title">Prototype Review</h3>
+      <p class="round-desc">Present a working prototype or demo of your solution to our technical panel. Judges evaluate feasibility and execution quality.</p>
+      <span class="round-badge">Aug 22, 2026</span>
+      <div class="round-arrow">→</div>
+    </div>
+    <div class="glass round-card reveal" style="transition-delay:0.3s">
+      <div class="round-num">03</div>
+      <span class="round-icon">🏆</span>
+      <h3 class="round-title">Grand Finale</h3>
+      <p class="round-desc">Top 10 teams present live to our expert judge panel. Winners are announced and prizes are awarded on stage.</p>
+      <span class="round-badge">Aug 24, 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- RULES -->
+<section id="rules" class="section">
+  <p class="section-label reveal">Guidelines</p>
+  <h2 class="section-title reveal">Rules & Regulations</h2>
+  <div class="gold-line reveal"></div>
+  <div class="rules-grid">
+    <div>
+      <div class="rule-item reveal"><span class="rule-icon">✦</span><span class="rule-text">Teams must consist of 2 to 4 members</span></div>
+      <div class="rule-item reveal"><span class="rule-icon">✦</span><span class="rule-text">At least one member must be from LTCE</span></div>
+      <div class="rule-item reveal"><span class="rule-icon">✦</span><span class="rule-text">All projects must be original and not submitted elsewhere</span></div>
+      <div class="rule-item reveal"><span class="rule-icon">✦</span><span class="rule-text">Plagiarism results in immediate disqualification</span></div>
+      <div class="rule-item reveal"><span class="rule-icon">✦</span><span class="rule-text">Abstract submission is mandatory before the deadline</span></div>
+    </div>
+    <div>
+      <div class="rule-item reveal"><span class="rule-icon">✦</span><span class="rule-text">A working prototype is required for Round 2</span></div>
+      <div class="rule-item reveal"><span class="rule-icon">✦</span><span class="rule-text">Teams must present in person on the event day</span></div>
+      <div class="rule-item reveal"><span class="rule-icon">✦</span><span class="rule-text">Live code or demo must be shown during judging</span></div>
+      <div class="rule-item reveal"><span class="rule-icon">✦</span><span class="rule-text">Late registrations will not be accepted under any circumstance</span></div>
+      <div class="rule-item reveal"><span class="rule-icon">✦</span><span class="rule-text">Judges' decision is final and binding</span></div>
+    </div>
+  </div>
+  <div class="rules-note reveal">
+    📌 For rule clarifications or special cases, contact the organizing committee at <a href="mailto:eureka@ltce.ac.in">eureka@ltce.ac.in</a>
+  </div>
+</section>
+
+<!-- JUDGES -->
+<section id="judges" class="section section-alt">
+  <p class="section-label reveal">Expert Panel</p>
+  <h2 class="section-title reveal">Judges To Be Announced</h2>
+  <div class="gold-line reveal"></div>
+  <div class="glass judge-card reveal" style="max-width:700px;margin:0 auto;text-align:center;padding:40px;">
+    <div class="judge-avatar gold">?</div>
+    <h3 class="judge-name">Coming Soon</h3>
+    <p class="judge-role">Our industry experts and mentors will be revealed soon.</p>
+    <p class="judge-org">Stay tuned for updates from E-Cell LTCE.</p>
+  </div>
+</section>
+
+
+<!-- PRIZES -->
+<section id="prizes" class="section">
+  <p class="section-label reveal">Win Big</p>
+  <h2 class="section-title reveal">Prizes & Recognition</h2>
+  <div class="gold-line reveal"></div>
+
+  <div class="podium">
+    <div class="glass prize-card reveal">
+      <span class="prize-rank">🥈</span>
+      <p class="prize-title">Runner-Up</p>
+      <p class="prize-extras">
+        Certificate of Excellence<br>
+        Mentorship Opportunity<br>
+      Networking Opportunities<br>
+      Featured Recognition
+      </p>
+    </div>
+
+    <div class="glass prize-card first reveal">
+      <span class="prize-rank">🥇</span>
+      <p class="prize-title">Winner</p>
+      <p class="prize-extras">
+        Winner Trophy
+      Winner Certificate<br>
+      Mentorship Opportunity<br>
+      Featured on E‑Cell LTCE Social Media<br>
+      Fast‑Track Evaluation for Eureka 2026 Zonal Round
+      </p>
+    </div>
+
+    <div class="glass prize-card reveal">
+      <span class="prize-rank">🥉</span>
+      <p class="prize-title">Second Runner‑Up</p>
+      <p class="prize-extras">
+      Certificate of Achievement<br>
+      Mentorship Opportunity<br>
+      Recognition on Social Media
+      </p>
+    </div>
+  </div>
+
+  <h3 class="benefits-title reveal">📊 Our Achievements</h3>
+  <div class="benefits-grid">
+    <div class="glass benefit-item reveal"><p class="benefit-name">100+ Expected Participants</p></div>
+    <div class="glass benefit-item reveal"><p class="benefit-name">20+ Innovative Ideas</p></div>
+    <div class="glass benefit-item reveal"><p class="benefit-name">5+ Student Communities Reached</p></div>
+    <div class="glass benefit-item reveal"><p class="benefit-name">Industry Mentorship Support</p></div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section id="faq" class="section section-alt">
+  <p class="section-label reveal">Got Questions?</p>
+  <h2 class="section-title reveal">Frequently Asked Questions</h2>
+  <div class="gold-line reveal"></div>
+  <div class="faq-wrap reveal">
+    <div class="faq-item">
+      <button class="faq-q">Who can participate in EUREKA?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Any currently enrolled student can participate. Teams of 2–4 members are allowed. At least one member must be from LTCE, Koparkhairane.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is there any registration fee?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">No, EUREKA is completely free for all students. There is no registration fee or participation charge.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What types of projects are accepted?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Any tech-driven project is welcome — web apps, mobile apps, AI/ML models, IoT and hardware, data science solutions, or any innovative technology solving a real-world problem.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">When is the registration deadline?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Registration closes on January 10, 2026. Late entries will not be accepted under any circumstance, so register early to secure your spot.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do we need a working prototype?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">For Round 1, only an abstract and problem statement are required. A working prototype or demo is mandatory for Round 2 onward.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Will mentorship be available?<span class="faq-icon">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Yes! All registered teams get access to mentorship sessions with our industry panel before the final round. Guidance on ideation, prototyping, and presentation will be provided.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTRATION -->
+
+
+<!-- CONTACT -->
+<section id="contact" class="section section-alt">
+  <p class="section-label reveal">Get in Touch</p>
+  <h2 class="section-title reveal">Contact Us</h2>
+  <div class="gold-line reveal"></div>
+  <div class="contact-grid">
+    <div class="reveal-left">
+      <div class="contact-info-item">
+        <div class="contact-icon">📍</div>
+        <div><p class="contact-detail-title">Address</p><p class="contact-detail-val">Lokmanya Tilak College of Engineering,<br/>Sector 4, Koparkhairane, Navi Mumbai — 400709</p></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">📧</div>
+        <div><p class="contact-detail-title">Email</p><p class="contact-detail-val">eureka@ltce.ac.in</p></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">📱</div>
+        <div><p class="contact-detail-title">Phone</p><p class="contact-detail-val">+91 8421107147</p></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="contact-icon">🕐</div>
+        <div><p class="contact-detail-title">Response Time</p><p class="contact-detail-val">Within 24 hours on weekdays</p></div>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-control" id="c-name" placeholder="Full name"/></div>
+      <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-control" id="c-email" placeholder="you@email.com"/></div>
+      <div class="form-group"><label class="form-label">Message</label><textarea class="form-control" id="c-msg" rows="5" placeholder="Your question or message..."></textarea></div>
+      <button class="btn-ghost-contact" onclick="sendMsg()">Send Message →</button>
+      <p class="contact-success" id="c-success">✅ Message sent! We'll get back to you within 24 hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <span class="footer-logo">EUREKA</span>
+      <p class="footer-tagline">Where Ideas Ignite Innovation.<br/>LTCE's Annual Tech Competition — Navi Mumbai.</p>
+    </div>
+    <div>
+      <p class="footer-col-title">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#rules">Rules</a></li>
+        <li><a href="#prizes">Prizes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Follow Us</p>
+      <div class="social-row">
+        <a href="https://instagram.com" class="social-btn" target="_blank" title="Instagram">📷</a>
+        <a href="https://linkedin.com" class="social-btn" target="_blank" title="LinkedIn">💼</a>
+        <a href="https://x.com" class="social-btn" target="_blank" title="Twitter/X">🐦</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2026 EUREKA — LTCE Tech Fest &nbsp;·&nbsp; Organised by Dept. of Computer Engineering, LTCE
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<div id="float-cta"><a href="Registration.html">Register Now →</a></div>
+
+<!-- BACK TO TOP -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+</body>
+</html>

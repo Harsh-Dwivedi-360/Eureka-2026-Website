@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EUREKA Registration</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    
+    <section id="register" class="section">
+      <a href="EUREKA_Updated.html" class="btn-ghost" style="margin-bottom:20px;display:inline-block">
+        ← Back to Home
+      </a>
+      <p class="section-label">Join Us</p>
+      <h2 class="section-title">Register for EUREKA 2026</h2>
+      <p class="section-sub">Registration closes January 10, 2026. Free for all students.</p>
+      <div class="glass reg-card" id="reg-card">
+        <div id="reg-form-wrap">
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Team Name *</label><input type="text" class="form-control" id="f-team" placeholder="e.g. Team Innovators"/></div>
+            <div class="form-group"><label class="form-label">Team Leader Name *</label><input type="text" class="form-control" id="f-leader" placeholder="Full name"/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Leader Email *</label><input type="email" class="form-control" id="f-email" placeholder="you@email.com"/></div>
+            <div class="form-group"><label class="form-label">Leader Phone *</label><input type="tel" class="form-control" id="f-phone" placeholder="+91 XXXXX XXXXX"/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">College Name *</label><input type="text" class="form-control" id="f-college" placeholder="Your institution"/></div>
+            <div class="form-group"><label class="form-label">LTCE Roll No <span style="color:var(--gray);font-weight:400">(LTCE only)</span></label><input type="text" class="form-control" id="f-roll" placeholder="Optional if from LTCE"/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Department *</label>
+              <select class="form-control" id="f-dept">
+                <option value="">Select department</option>
+                <option>Computer Engineering</option><option>Information Technology</option>
+                <option>Electronics & Telecom</option><option>Mechanical</option>
+                <option>Civil</option><option>Other</option>
+              </select>
+            </div>
+            <div class="form-group"><label class="form-label">Team Size *</label>
+              <select class="form-control" id="f-size">
+                <option value="">Select size</option>
+                <option>2 Members</option><option>3 Members</option><option>4 Members</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Project Title *</label><input type="text" class="form-control" id="f-proj" placeholder="Your project name"/></div>
+            <div class="form-group"><label class="form-label">Project Category *</label>
+              <select class="form-control" id="f-cat">
+                <option value="">Select category</option>
+                <option>Web / Mobile App</option><option>AI / ML</option>
+                <option>IoT / Hardware</option><option>Data Science</option><option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label class="form-label">Brief Project Description *</label><textarea class="form-control" id="f-desc" placeholder="Describe your project idea and the problem it solves..." rows="4"></textarea></div>
+          <div class="form-group"><label class="form-label">GitHub / Portfolio Link <span style="color:var(--gray);font-weight:400">(Optional)</span></label><input type="url" class="form-control" id="f-git" placeholder="https://github.com/..."/></div>
+          <div id="reg-error" style="color:#f87171;font-size:13px;margin-bottom:12px;display:none"></div>
+          <button class="btn-submit" onclick="submitReg()">Submit Registration →</button>
+        </div>
+        <div class="success-card" id="reg-success">
+          <span class="success-icon">🎉</span>
+          <h3 class="success-title">You're Registered!</h3>
+          <p class="success-text">We'll reach out to you soon with the next steps.<br/>Gear up for EUREKA 2026 — it's going to be epic!</p>
+        </div>
+      </div>
+    </section>
+    <!-- Supabase Library -->
+    
+    <script src="Script.js" defer></script>
+<script>
+const supabaseUrl = "https://lwlnpddromxyplsjzvqx.supabase.co";
+const supabaseKey = "sb_publishable_4zoqfzIfLq34aZ9iUVBFlQ_CO2G5FiH";
+
+const supabaseClient = supabase.createClient(
+  supabaseUrl,
+  supabaseKey
+);
+</script>
+
+</body>
+</html>
+
+
+
