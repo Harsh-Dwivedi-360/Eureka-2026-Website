@@ -50,7 +50,7 @@ sections.forEach(s => observer.observe(s));
 
 /* === COUNTDOWN (Target: Aug 20, 2026) === */
 function updateCountdown(){
-  const target = new Date("2026-08-21T00:00:00").getTime();
+  const target = new Date("2026-08-21T12:00:00").getTime();
   const now = Date.now();
   const diff = target - now;
   if(diff <= 0){
