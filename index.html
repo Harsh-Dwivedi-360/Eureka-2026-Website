@@ -12,173 +12,401 @@
 </head>
 <body>
 
-  <!-- 🚨 REGISTRATION EXTENDED POPUP -->
-<div id="announcementPopup" class="announcement-overlay">
-    <div class="announcement-box">
+<!-- 🚨 EUREKA REGISTRATION EXTENDED POPUP -->
+<div id="announcementPopup" class="eureka-popup-overlay">
 
-        <button class="close-announcement" onclick="closeAnnouncement()">
+    <div class="eureka-popup">
+
+        <!-- Close Button -->
+        <button class="eureka-popup-close" onclick="closeEurekaPopup()">
             &times;
         </button>
 
-        <div class="announcement-icon">🚨</div>
+        <!-- Icon -->
+        <div class="eureka-popup-icon">🚀</div>
 
+        <!-- Heading -->
         <h2>REGISTRATION EXTENDED!</h2>
 
-        <p class="announcement-text">
+        <div class="eureka-popup-line"></div>
+
+        <!-- Message -->
+        <p class="eureka-popup-message">
             Due to overwhelming interest, registrations for
             <strong>EUREKA 2026</strong> have been extended!
         </p>
 
-        <div class="deadline-box">
-            <span>⏰ FINAL DEADLINE</span>
-            <strong>21 AUGUST 2026</strong>
-            <b>12:00 PM (NOON)</b>
+        <!-- Deadline -->
+        <div class="eureka-deadline">
+
+            <p>⏰ FINAL DEADLINE</p>
+
+            <h3>21 AUGUST 2026</h3>
+
+            <h4>12:00 PM (NOON)</h4>
+
         </div>
 
-        <p class="last-chance">
+        <!-- Warning -->
+        <p class="eureka-warning">
             ⚠️ After 12:00 PM, registrations will be CLOSED.
         </p>
 
-        <a href="https://eureka-2026.netlify.app" class="register-btn">
+        <!-- Register Button -->
+        <a
+            href="Registration.html"
+            class="eureka-register-btn"
+        >
             🚀 REGISTER NOW
         </a>
 
     </div>
 </div>
 
+
 <style>
-/* Popup Background */
-.announcement-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(6px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
+
+/* ==============================
+   EUREKA POPUP
+   ============================== */
+
+.eureka-popup-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    background: rgba(0, 0, 0, 0.82) !important;
+
+    backdrop-filter: blur(8px);
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
     padding: 20px;
+
+    z-index: 999999 !important;
 }
 
-/* Popup Box */
-.announcement-box {
+
+/* POPUP BOX */
+
+.eureka-popup {
+
     position: relative;
+
     width: 100%;
-    max-width: 450px;
-    background: white;
-    border-radius: 20px;
-    padding: 35px 25px;
+    max-width: 460px;
+
+    background: #111827 !important;
+
+    color: #ffffff !important;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 24px;
+
+    padding: 38px 28px 32px;
+
     text-align: center;
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
-    animation: popupAppear 0.4s ease;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.6),
+        0 0 40px rgba(255,255,255,0.08);
+
+    animation: eurekaPopup 0.45s ease;
+
+    font-family: inherit;
 }
 
-/* Animation */
-@keyframes popupAppear {
+
+/* POPUP ANIMATION */
+
+@keyframes eurekaPopup {
+
     from {
         opacity: 0;
-        transform: scale(0.8);
+        transform: scale(0.85) translateY(20px);
     }
+
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: scale(1) translateY(0);
     }
+
 }
 
-/* Close Button */
-.close-announcement {
+
+/* CLOSE BUTTON */
+
+.eureka-popup-close {
+
     position: absolute;
+
     top: 10px;
     right: 15px;
-    border: none;
-    background: transparent;
-    font-size: 30px;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    color: #ffffff !important;
+
+    font-size: 32px;
+
     cursor: pointer;
-    color: #555;
+
+    line-height: 1;
+
+    opacity: 0.8;
+
 }
 
-.close-announcement:hover {
-    color: #000;
+.eureka-popup-close:hover {
+    opacity: 1;
 }
 
-/* Icon */
-.announcement-icon {
-    font-size: 45px;
-    margin-bottom: 10px;
+
+/* ICON */
+
+.eureka-popup-icon {
+
+    font-size: 48px;
+
+    margin-bottom: 8px;
+
 }
 
-/* Heading */
-.announcement-box h2 {
-    margin: 0 0 15px;
-    font-size: 26px;
-    font-weight: 800;
+
+/* HEADING */
+
+.eureka-popup h2 {
+
+    margin: 0 !important;
+
+    color: #ffffff !important;
+
+    font-size: 27px !important;
+
+    font-weight: 800 !important;
+
+    letter-spacing: 0.5px;
+
 }
 
-/* Text */
-.announcement-text {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
+
+/* LINE */
+
+.eureka-popup-line {
+
+    width: 70px;
+
+    height: 3px;
+
+    margin: 14px auto 18px;
+
+    background: linear-gradient(
+        90deg,
+        #ff512f,
+        #f09819
+    );
+
+    border-radius: 10px;
+
 }
 
-/* Deadline */
-.deadline-box {
-    padding: 18px;
-    border-radius: 15px;
+
+/* MESSAGE */
+
+.eureka-popup-message {
+
+    color: #e5e7eb !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.6;
+
+    margin: 0 0 20px;
+
+}
+
+.eureka-popup-message strong {
+
+    color: #ffffff !important;
+
+}
+
+
+/* DEADLINE BOX */
+
+.eureka-deadline {
+
+    background: linear-gradient(
+        135deg,
+        rgba(255,81,47,0.15),
+        rgba(240,152,25,0.15)
+    ) !important;
+
+    border: 1px solid rgba(255,152,25,0.4);
+
+    border-radius: 18px;
+
+    padding: 18px 10px;
+
     margin: 20px 0;
-    background: #f5f5f5;
+
 }
 
-.deadline-box span {
-    display: block;
-    font-size: 13px;
-    font-weight: 700;
-    margin-bottom: 7px;
+
+/* FINAL DEADLINE */
+
+.eureka-deadline p {
+
+    margin: 0 0 7px;
+
+    color: #fbbf24 !important;
+
+    font-size: 13px !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: 1px;
+
 }
 
-.deadline-box strong {
-    display: block;
-    font-size: 22px;
-    margin-bottom: 5px;
+
+/* DATE */
+
+.eureka-deadline h3 {
+
+    margin: 0 !important;
+
+    color: #ffffff !important;
+
+    font-size: 23px !important;
+
+    font-weight: 800 !important;
+
 }
 
-.deadline-box b {
-    font-size: 18px;
+
+/* TIME */
+
+.eureka-deadline h4 {
+
+    margin: 5px 0 0;
+
+    color: #fbbf24 !important;
+
+    font-size: 18px !important;
+
 }
 
-/* Warning */
-.last-chance {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 22px;
+
+/* WARNING */
+
+.eureka-warning {
+
+    color: #fca5a5 !important;
+
+    font-size: 13px !important;
+
+    font-weight: 600 !important;
+
+    margin: 15px 0 22px;
+
 }
 
-/* Register Button */
-.register-btn {
+
+/* REGISTER BUTTON */
+
+.eureka-register-btn {
+
     display: inline-block;
-    padding: 13px 28px;
+
+    padding: 13px 30px;
+
     border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
-    background: #000;
-    color: white;
-    transition: 0.3s;
+
+    background: linear-gradient(
+        135deg,
+        #ff512f,
+        #f09819
+    ) !important;
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    font-size: 16px !important;
+
+    font-weight: 800 !important;
+
+    border: none;
+
+    box-shadow:
+        0 8px 25px rgba(255,81,47,0.3);
+
+    transition: all 0.3s ease;
+
 }
 
-.register-btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.85;
+
+.eureka-register-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(255,81,47,0.45);
+
 }
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .eureka-popup {
+
+        padding: 34px 20px 28px;
+
+        border-radius: 20px;
+
+    }
+
+    .eureka-popup h2 {
+
+        font-size: 23px !important;
+
+    }
+
+    .eureka-popup-message {
+
+        font-size: 14px !important;
+
+    }
+
+    .eureka-deadline h3 {
+
+        font-size: 20px !important;
+
+    }
+
+}
+
 </style>
 
+
 <script>
-function closeAnnouncement() {
+
+function closeEurekaPopup() {
+
     document.getElementById("announcementPopup").style.display = "none";
+
 }
+
 </script>
   
 
