@@ -18,8 +18,12 @@
     <div class="eureka-popup">
 
         <!-- Close Button -->
-        <button class="eureka-popup-close" onclick="closeEurekaPopup()">
-            &times;
+        <button 
+    type="button"
+    class="eureka-popup-close"
+    onclick="closeEurekaPopup()"
+    aria-label="Close announcement">
+    &times;
         </button>
 
         <!-- Icon -->
@@ -70,26 +74,15 @@
    EUREKA POPUP
    ============================== */
 
-.eureka-popup-overlay {
-    position: fixed !important;
-    inset: 0 !important;
 
-    width: 100% !important;
-    height: 100% !important;
-
-    background: rgba(0, 0, 0, 0.82) !important;
-
-    backdrop-filter: blur(8px);
-
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-
-    padding: 20px;
-
-    z-index: 999999 !important;
+    .eureka-popup-overlay {
+    transition: opacity 0.3s ease;
 }
 
+.eureka-popup-overlay.hide {
+    opacity: 0;
+    pointer-events: none;
+}
 
 /* POPUP BOX */
 
@@ -400,13 +393,17 @@
 
 
 <script>
-
 function closeEurekaPopup() {
+    const popup = document.getElementById("announcementPopup");
 
-    document.getElementById("announcementPopup").style.display = "none";
+    if (popup) {
+        popup.classList.add("hide");
 
+        setTimeout(() => {
+            popup.style.display = "none";
+        }, 300);
+    }
 }
-
 </script>
   
 
